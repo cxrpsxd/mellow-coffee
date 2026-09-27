@@ -24,9 +24,27 @@ export function SpaceSection() {
         </Reveal>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          <motion.div style={{ y: y1 }} className="col-span-1 aspect-[3/4] rounded-2xl bg-terracotta/25 grain" />
-          <motion.div style={{ y: y2 }} className="col-span-1 aspect-[3/4] rounded-2xl bg-espresso/15 grain mt-8" />
-          <motion.div style={{ y: y1 }} className="hidden md:block col-span-1 aspect-[3/4] rounded-2xl bg-sage/35 grain" />
+          <motion.div style={{ y: y1 }} className="col-span-1 aspect-[3/4] rounded-2xl overflow-hidden">
+            <img
+              src="https://picsum.photos/seed/mellow-coffee-space-1/500/700"
+              alt="Зона с деревянными столами и мягким светом"
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
+          <motion.div style={{ y: y2 }} className="col-span-1 aspect-[3/4] rounded-2xl overflow-hidden mt-8">
+            <img
+              src="https://picsum.photos/seed/mellow-coffee-space-2/500/700"
+              alt="Барная стойка кофейни"
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
+          <motion.div style={{ y: y1 }} className="hidden md:block col-span-1 aspect-[3/4] rounded-2xl overflow-hidden">
+            <img
+              src="https://picsum.photos/seed/mellow-coffee-space-3/500/700"
+              alt="Уютный уголок кофейни"
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
         </div>
       </div>
     </section>

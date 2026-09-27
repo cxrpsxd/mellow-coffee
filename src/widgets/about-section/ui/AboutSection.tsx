@@ -11,7 +11,13 @@ export function AboutSection() {
     <section id="about" className="bg-sage/25 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5 md:px-8 grid md:grid-cols-2 gap-10 items-center">
         <Reveal>
-          <div className="aspect-[4/5] rounded-3xl bg-terracotta/30 grain" />
+          <div className="aspect-[4/5] rounded-3xl overflow-hidden">
+            <img
+              src="https://picsum.photos/seed/mellow-coffee-about/700/900"
+              alt="Владельцы кофейни за обжаркой зерна"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </Reveal>
 
         <div>

@@ -57,9 +57,27 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-14 grid grid-cols-3 gap-3 md:gap-4 h-56 md:h-80"
         >
-          <div className="col-span-1 rounded-2xl bg-terracotta/20 grain" />
-          <div className="col-span-1 rounded-2xl bg-sage/30 grain" />
-          <div className="col-span-1 rounded-2xl bg-honey/30 grain" />
+          <div className="col-span-1 relative rounded-2xl overflow-hidden">
+            <img
+              src="https://picsum.photos/seed/mellow-coffee-1/600/800"
+              alt="Чашка кофе в интерьере кофейни"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="col-span-1 relative rounded-2xl overflow-hidden">
+            <img
+              src="https://picsum.photos/seed/mellow-coffee-2/600/800"
+              alt="Интерьер кофейни Mellow Coffee"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="col-span-1 relative rounded-2xl overflow-hidden">
+            <img
+              src="https://picsum.photos/seed/mellow-coffee-3/600/800"
+              alt="Десерт и напиток на столе"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
