@@ -1,0 +1,7 @@
+name = "mellow-coffee-booking"
+main = "worker.js"
+compatibility_date = "2024-09-01"
+
+# Секреты НЕ пишите сюда. Задайте их командами:
+#   wrangler secret put TELEGRAM_BOT_TOKEN
+#   wrangler secret put TELEGRAM_CHAT_ID
