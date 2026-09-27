@@ -4,6 +4,8 @@
 
 html {
   scroll-behavior: smooth;
+  --font-display: 'Unbounded', 'Arial Black', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {

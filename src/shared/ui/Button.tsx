@@ -5,6 +5,8 @@ import { ButtonHTMLAttributes } from 'react';
 
 type Variant = 'primary' | 'outline' | 'dark';
 
+// У Framer Motion свои (несовместимые с DOM) сигнатуры для onAnimationStart/onDrag* —
+// исключаем их из обычных HTML-атрибутов кнопки, чтобы не было конфликта типов.
 type ConflictingHandlers =
   | 'onAnimationStart'
   | 'onAnimationEnd'

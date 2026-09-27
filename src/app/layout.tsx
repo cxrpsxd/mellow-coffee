@@ -1,18 +1,5 @@
 import type { Metadata } from 'next';
-import { Unbounded, Inter } from 'next/font/google';
 import './globals.css';
-
-const display = Unbounded({
-  subsets: ['latin', 'cyrillic'],
-  weight: ['500', '700'],
-  variable: '--font-display',
-});
-
-const body = Inter({
-  subsets: ['latin', 'cyrillic'],
-  weight: ['400', '500', '600'],
-  variable: '--font-body',
-});
 
 export const metadata: Metadata = {
   title: 'Mellow Coffee — уютная кофейня с обжаркой под себя',
@@ -22,7 +9,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ru" className={`${display.variable} ${body.variable}`}>
+    <html lang="ru">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="font-body antialiased">{children}</body>
     </html>
   );
