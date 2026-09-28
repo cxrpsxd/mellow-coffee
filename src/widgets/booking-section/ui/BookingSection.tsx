@@ -6,7 +6,7 @@ export function BookingSection() {
     <section id="booking" className="bg-espresso py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-5 md:px-8">
         <Reveal>
-          <h2 className="section-heading text-4xl md:text-6xl uppercase mb-4 text-foam">
+          <h2 className="section-heading text-[clamp(1.4rem,7vw,2.25rem)] md:text-5xl lg:text-6xl uppercase mb-4 text-foam">
             Бронирование
           </h2>
         </Reveal>

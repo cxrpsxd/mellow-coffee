@@ -15,7 +15,7 @@ export function SpaceSection() {
     <section id="space" ref={ref} className="bg-honey/25 py-20 md:py-28 overflow-hidden">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <Reveal>
-          <h2 className="section-heading text-4xl md:text-6xl uppercase mb-4">Пространство</h2>
+          <h2 className="section-heading text-[clamp(1.4rem,7vw,2.25rem)] md:text-5xl lg:text-6xl uppercase mb-4">Пространство</h2>
         </Reveal>
         <Reveal delay={0.1}>
           <p className="text-espresso/70 max-w-lg mb-10">

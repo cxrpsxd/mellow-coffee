@@ -88,7 +88,7 @@ export function DatePicker({ value, onChange, error }: DatePickerProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -6, scale: 0.98 }}
             transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute z-20 mt-2 w-72 rounded-2xl border border-espresso/10 bg-foam p-4 shadow-xl"
+            className="absolute z-20 mt-2 w-[min(18rem,calc(100vw-3.5rem))] rounded-2xl border border-espresso/10 bg-foam p-4 shadow-xl"
           >
             <div className="flex items-center justify-between mb-3">
               <button

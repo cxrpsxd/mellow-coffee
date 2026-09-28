@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useMemo } from 'react';
+import { FormEvent, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useBookingStore } from '../model/store';
 import { sendBooking } from '../api/sendBooking';
@@ -9,7 +9,12 @@ import { Select } from '@/shared/ui/Select';
 import { DatePicker } from '@/shared/ui/DatePicker';
 import { useLocalStorageDraft, clearLocalStorageDraft } from '@/shared/lib/useLocalStorageDraft';
 import { generateTimeSlots } from '@/shared/lib/timeSlots';
-import { validateBookingForm, isFormValid, BookingFormValues } from '@/shared/lib/validators';
+import {
+  validateBookingForm,
+  isFormValid,
+  BookingFormValues,
+  BookingFormErrors,
+} from '@/shared/lib/validators';
 
 const DRAFT_KEY = 'mellow-coffee:booking-draft';
 const TIME_SLOTS = generateTimeSlots(10, 22, 30); // 10:00 — 22:00, шаг 30 минут
@@ -20,11 +25,15 @@ export function BookingForm() {
   // Гидратация черновика из localStorage при первом рендере + автосохранение при изменениях
   useLocalStorageDraft<BookingFormValues>(DRAFT_KEY, values, (draft) => setAll(draft));
 
-  const errors = useMemo(() => validateBookingForm(values), [values]);
+  const allErrors = useMemo(() => validateBookingForm(values), [values]);
+  // Ошибки показываем только после первой попытки отправки, а не сразу при загрузке страницы
+  const [showErrors, setShowErrors] = useState(false);
+  const errors: BookingFormErrors = showErrors ? allErrors : {};
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    if (!isFormValid(errors)) {
+    setShowErrors(true);
+    if (!isFormValid(allErrors)) {
       setStatus('error');
       return;
     }
@@ -34,6 +43,7 @@ export function BookingForm() {
       setStatus('success');
       clearLocalStorageDraft(DRAFT_KEY);
       reset();
+      setShowErrors(false);
     } catch {
       setStatus('error');
     }

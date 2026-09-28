@@ -11,6 +11,7 @@ html {
 body {
   background-color: #F3E9DD;
   color: #1E1712;
+  overflow-x: hidden; /* страховка от горизонтальной прокрутки на телефонах */
 }
 
 /* Тонкая текстура «крафтовой бумаги» поверх фоновых секций */
@@ -32,6 +33,7 @@ body {
 }
 
 .section-heading {
+  overflow-wrap: anywhere; /* длинное слово переносится, а не вылезает за экран */
   font-family: var(--font-display);
   font-weight: 700;
   letter-spacing: -0.02em;
