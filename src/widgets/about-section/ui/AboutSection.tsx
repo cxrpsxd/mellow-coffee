@@ -1,4 +1,5 @@
 import { Reveal } from '@/shared/ui/Reveal';
+import { images } from '@/shared/config/images';
 
 const facts = [
   { value: '2019', label: 'год открытия' },
@@ -13,8 +14,8 @@ export function AboutSection() {
         <Reveal>
           <div className="aspect-[4/5] rounded-3xl overflow-hidden">
             <img
-              src="https://picsum.photos/seed/mellow-coffee-about/700/900"
-              alt="Владельцы кофейни за обжаркой зерна"
+              src={images.about.src}
+              alt={images.about.alt}
               className="h-full w-full object-cover"
             />
           </div>

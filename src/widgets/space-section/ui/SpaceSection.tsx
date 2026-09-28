@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Reveal } from '@/shared/ui/Reveal';
+import { images } from '@/shared/config/images';
 
 export function SpaceSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,22 +27,22 @@ export function SpaceSection() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           <motion.div style={{ y: y1 }} className="col-span-1 aspect-[3/4] rounded-2xl overflow-hidden">
             <img
-              src="https://picsum.photos/seed/mellow-coffee-space-1/500/700"
-              alt="Зона с деревянными столами и мягким светом"
+              src={images.space[0].src}
+              alt={images.space[0].alt}
               className="h-full w-full object-cover"
             />
           </motion.div>
           <motion.div style={{ y: y2 }} className="col-span-1 aspect-[3/4] rounded-2xl overflow-hidden mt-8">
             <img
-              src="https://picsum.photos/seed/mellow-coffee-space-2/500/700"
-              alt="Барная стойка кофейни"
+              src={images.space[1].src}
+              alt={images.space[1].alt}
               className="h-full w-full object-cover"
             />
           </motion.div>
           <motion.div style={{ y: y1 }} className="hidden md:block col-span-1 aspect-[3/4] rounded-2xl overflow-hidden">
             <img
-              src="https://picsum.photos/seed/mellow-coffee-space-3/500/700"
-              alt="Уютный уголок кофейни"
+              src={images.space[2].src}
+              alt={images.space[2].alt}
               className="h-full w-full object-cover"
             />
           </motion.div>

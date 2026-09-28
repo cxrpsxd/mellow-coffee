@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/shared/ui/Button';
 import { FloatingBadge } from '@/shared/ui/FloatingBadge';
+import { images } from '@/shared/config/images';
 
 export function Hero() {
   return (
@@ -59,22 +60,22 @@ export function Hero() {
         >
           <div className="col-span-1 relative rounded-2xl overflow-hidden">
             <img
-              src="https://picsum.photos/seed/mellow-coffee-1/600/800"
-              alt="Чашка кофе в интерьере кофейни"
+              src={images.hero[0].src}
+              alt={images.hero[0].alt}
               className="h-full w-full object-cover"
             />
           </div>
           <div className="col-span-1 relative rounded-2xl overflow-hidden">
             <img
-              src="https://picsum.photos/seed/mellow-coffee-2/600/800"
-              alt="Интерьер кофейни Mellow Coffee"
+              src={images.hero[1].src}
+              alt={images.hero[1].alt}
               className="h-full w-full object-cover"
             />
           </div>
           <div className="col-span-1 relative rounded-2xl overflow-hidden">
             <img
-              src="https://picsum.photos/seed/mellow-coffee-3/600/800"
-              alt="Десерт и напиток на столе"
+              src={images.hero[2].src}
+              alt={images.hero[2].alt}
               className="h-full w-full object-cover"
             />
           </div>
