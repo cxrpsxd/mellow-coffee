@@ -9,7 +9,7 @@
  * Разрешённый источник запросов ограничен через ALLOWED_ORIGIN (CORS).
  */
 
-const ALLOWED_ORIGIN = 'mellow-coffee.netlify.app';
+const ALLOWED_ORIGIN = 'https://mellow-coffee.netlify.app';
 
 function corsHeaders() {
   return {
