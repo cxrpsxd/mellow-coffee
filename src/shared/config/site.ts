@@ -24,5 +24,5 @@ export const siteConfig = {
   // URL Cloudflare Worker, который пересылает заявку в Telegram.
   // Замените на адрес вашего задеплоенного воркера, например:
   // https://mellow-coffee-booking.<ваш-аккаунт>.workers.dev
-  bookingWorkerUrl: 'https://REPLACE_WITH_YOUR_WORKER_URL.workers.dev',
+  bookingWorkerUrl: 'https://mellow-coffee-booking.corpsed.workers.dev',
 };
